@@ -10,8 +10,8 @@ import java.util.Arrays;
 public class StackDumpParserTest {
     String dots = """
             goroutine 1257 [chan receive]:
-            github.com/hanzozt/sdk-golang/ziti/edge.(*MsgChannel).WriteTraced(0xc0002c8bd0, 0xc0232c553e, 0x2800, 0x2800, 0x0, 0x0, 0x0, 0x0, 0x2800, 0x0, ...)
-            	/home/plorenz/work/nf/sdk-golang/ziti/edge/conn.go:148 +0x42e
+            github.com/hanzozt/sdk-golang/zt/edge.(*MsgChannel).WriteTraced(0xc0002c8bd0, 0xc0232c553e, 0x2800, 0x2800, 0x0, 0x0, 0x0, 0x0, 0x2800, 0x0, ...)
+            	/home/plorenz/work/nf/sdk-golang/zt/edge/conn.go:148 +0x42e
             github.com/hanzozt/edge/router/xgress_edge.(*localMessageSink).WritePayload(0xc0002c8bd0, 0xc0232c553e, 0x2800, 0x2800, 0x0, 0x1, 0x1, 0xc01fbcd220)
             	/home/plorenz/work/nf/edge/router/xgress_edge/fabric.go:97 +0xa5
             github.com/hanzozt/fabric/router/xgress.(*Xgress).tx(0xc000c406e0)
@@ -32,10 +32,10 @@ public class StackDumpParserTest {
 
         var element = stack.elements.get(0);
         System.out.println(element.toString());
-        Assert.assertEquals("github.com/hanzozt/sdk-golang/ziti/edge", element.pkg);
+        Assert.assertEquals("github.com/hanzozt/sdk-golang/zt/edge", element.pkg);
         Assert.assertEquals("edge", element.shortPkg);
         Assert.assertEquals("(*MsgChannel)", element.receiver);
-        Assert.assertEquals("/home/plorenz/work/nf/sdk-golang/ziti/edge/conn.go", element.path);
+        Assert.assertEquals("/home/plorenz/work/nf/sdk-golang/zt/edge/conn.go", element.path);
         Assert.assertEquals(148, element.line);
         Assert.assertFalse(element.createdBy);
 
