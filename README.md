@@ -7,14 +7,14 @@ This is a GUI tool for helping analyze golang goroutine dumps. It has the follow
 * Grouping, extracting or hiding similar goroutines, either manually or automatically
 * Regex based grouping
 
-The tool was written to support production deployments of [OpenZiti](https://github.com/openziti/ziti).
-It works well together with the [agent library](https://github.com/openziti/agent) which supports
+The tool was written to support production deployments of [Hanzo ZT](https://github.com/hanzozt/ziti).
+It works well together with the [agent library](https://github.com/hanzozt/agent) which supports
 debugging operations such as extracting stackdumps and getting pprof dumps.  
 
 The tool is written in Java for expediency on the UI front. 
 
 ## Installation
-Installers can be downloaded for the latest release at https://github.com/openziti/goroutine-analyzer/releases/latest
+Installers can be downloaded for the latest release at https://github.com/hanzozt/goroutine-analyzer/releases/latest
 
 The following are available:
 
